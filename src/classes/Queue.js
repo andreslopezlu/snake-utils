@@ -1,13 +1,20 @@
-class Queue extends DoubleLinkedList{
+import { DoubleLinkedList } from "./DoubleLinkedList";
+import { Node } from "./Node";
+class Queue {
     constructor() {
-        this.list = new DoubleLinkedList()
+        this._list = new DoubleLinkedList();
     }
 
     add(data) {
-        this.lista.push(data)
+        let node = new Node(data);
+        this._list.push(node);
     }
 
-    run() {
-        this.lista.shift()
+    pop() {
+        let data = this._list.shift();
+        return data;
     }
+
 }
+
+export {Queue}

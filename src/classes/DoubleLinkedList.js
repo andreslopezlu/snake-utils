@@ -1,12 +1,12 @@
-
-
 class DoubleLinkedList {
     constructor(){
         this.first = null;
         this.last = null;
+        this.len = 0;
     }
 
     push(node) {
+        this.len += 1;
         if (this.first === null) {
             this.first = node;
             this.last = node;
@@ -18,6 +18,7 @@ class DoubleLinkedList {
     }
 
     unshift(node) {
+        this.len += 1;
         if (this.first === null) {
             this.first = node;
             this.last = node;
@@ -29,25 +30,48 @@ class DoubleLinkedList {
     }
 
     pop() {
-        if (this.first !== none) {
+        this.len -= 1;
+        let node = null;
+        if (this.first !== null) {
             if (this.first == this.last) {
-                this.first = node;
-                this.last = node;
+                node = this.first;
+                this.first = null;
+                this.last = null;
+                return node;
             } else {
+                node = this.last;
                 this.last = this.last.prev;
                 this.last.next = null;
             }
         }
+        return node;
     }
 
     shift() {
+        this.len -= 1;
+        let node = null;
+        node = this.first
         if (this.first !== null){
             this.first = this.first.next;
             if (this.first === null) {
-                this.last = null
+                this.last = null;
             } else {
-                this.first.prev = null
+                this.first.prev = null;
             }
         }
+        return node;
     }
+
+    getList() {
+        let node = this.first;
+        let resultList = [];
+        while (node !== null) {
+            resultList.push(node.data);
+            node = node.next
+        }
+        return resultList;
+    }
+
 }
+
+export {DoubleLinkedList};

@@ -6,3 +6,5 @@ class Node {
         this.prev = null;
     }
 }
+
+export {Node}
