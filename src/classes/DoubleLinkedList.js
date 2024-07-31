@@ -62,13 +62,15 @@ class DoubleLinkedList {
         return node;
     }
 
-    getList() {
+    getValues() {
+        const resultList = [];
         let node = this.first;
-        let resultList = [];
-        while (node !== null) {
+
+        while (node) {
             resultList.push(node.data);
             node = node.next
         }
+
         return resultList;
     }
 
