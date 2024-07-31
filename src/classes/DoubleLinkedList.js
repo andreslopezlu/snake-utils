@@ -30,20 +30,13 @@ class DoubleLinkedList {
     }
 
     pop() {
+        if (!this.first) return;
+
+        const node = this.last;
+        this.last = this.last.prev;
+        this.last ? this.last.next = null : this.first = null;
         this.len -= 1;
-        let node = null;
-        if (this.first !== null) {
-            if (this.first == this.last) {
-                node = this.first;
-                this.first = null;
-                this.last = null;
-                return node;
-            } else {
-                node = this.last;
-                this.last = this.last.prev;
-                this.last.next = null;
-            }
-        }
+
         return node;
     }
 
