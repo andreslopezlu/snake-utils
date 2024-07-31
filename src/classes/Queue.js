@@ -1,5 +1,4 @@
 import { DoubleLinkedList } from "./DoubleLinkedList";
-import { Node } from "./Node";
 class Queue {
     constructor() {
         this._list = new DoubleLinkedList();
