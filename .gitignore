@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output directories
+dist/
+build/
+
+# Testing
+coverage/
+*.lcov
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Parcel-bundler cache
+.cache
+
+# Next.js build output
+.next/
+out/
+
+# Gatsby files
+.cache/
+public/
+
+# Storybook
+.storybook/
+out/
+
+# Webpack file
+.w
