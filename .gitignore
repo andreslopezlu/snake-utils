@@ -46,3 +46,6 @@ out/
 
 # Webpack file
 .w
+
+# package-lock.json
+package-lock.json
