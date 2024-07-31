@@ -5,8 +5,7 @@ class Queue {
     }
 
     add(data) {
-        let node = new Node(data);
-        this._list.push(node);
+        this._list.push(data);
     }
 
     pop() {
