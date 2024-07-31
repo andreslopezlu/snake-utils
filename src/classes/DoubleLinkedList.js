@@ -41,17 +41,14 @@ class DoubleLinkedList {
     }
 
     shift() {
+        if (!this.first) return;
+
+        const node = this.first;
+
+        this.first = this.first.next;
+        this.first ? this.first.prev = null : this.last = null;
         this.len -= 1;
-        let node = null;
-        node = this.first
-        if (this.first !== null){
-            this.first = this.first.next;
-            if (this.first === null) {
-                this.last = null;
-            } else {
-                this.first.prev = null;
-            }
-        }
+
         return node;
     }
 
