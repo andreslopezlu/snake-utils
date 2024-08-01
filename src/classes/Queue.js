@@ -9,7 +9,7 @@ class Queue {
     }
 
     pop() {
-        return this._list.shift();;
+        return this._list.shift();
     }
 
 }

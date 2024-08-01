@@ -1,3 +1,5 @@
+import { Node } from "./Node";
+
 class DoubleLinkedList {
     constructor(){
         this.first = null;
@@ -5,7 +7,9 @@ class DoubleLinkedList {
         this.len = 0;
     }
 
-    push(node) {
+    push(data) {
+        const node = new Node(data);
+
         this.len += 1;
         if (this.first === null) {
             this.first = node;
@@ -17,7 +21,9 @@ class DoubleLinkedList {
         }
     }
 
-    unshift(node) {
+    unshift(data) {
+        const node = new Node(data);
+
         this.len += 1;
         if (this.first === null) {
             this.first = node;
