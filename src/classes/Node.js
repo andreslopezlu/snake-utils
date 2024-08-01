@@ -1,10 +1,10 @@
 
 class Node {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-        this.prev = null;
-    }
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+    this.prev = null;
+  }
 }
 
-export {Node}
+export {Node};

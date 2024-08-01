@@ -1,17 +1,17 @@
-import { DoubleLinkedList } from "./DoubleLinkedList";
+import { DoubleLinkedList } from './DoubleLinkedList';
+
 class Queue {
-    constructor() {
-        this._list = new DoubleLinkedList();
-    }
+  constructor() {
+    this._list = new DoubleLinkedList();
+  }
 
-    add(data) {
-        this._list.push(data);
-    }
+  add(data) {
+    this._list.push(data);
+  }
 
-    pop() {
-        return this._list.shift();
-    }
-
+  pop() {
+    return this._list.shift();
+  }
 }
 
-export {Queue}
+export {Queue};

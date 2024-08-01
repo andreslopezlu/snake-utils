@@ -1,36 +1,30 @@
-import _, { map } from 'underscore';
+import _ from 'underscore';
 import { Queue } from '../src/classes/Queue';
 
 describe ('test the Queue class', () => {
 
-    let obj1;
-    let newQueue;
+  let obj1;
+  let newQueue;
 
-    beforeEach(() => {
+  beforeEach(() => {
 
-        obj1 = {
-            x: 1,
-            y: 2,
-        }
-        
-        newQueue = new Queue();
+    obj1 = {
+      x: 1,
+      y: 2,
+    };
 
-    })
+    newQueue = new Queue();
+  });
 
-    test ('should be an instance of Queue', () => {
+  test ('should be an instance of Queue', () => {
+    expect(newQueue).toBeInstanceOf(Queue);
+  });
 
-        expect(newQueue).toBeInstanceOf(Queue);
+  test ('the Queue constructor accepts the given data as argument correctly', () => {
 
-    })
+    newQueue.add(obj1);
+    let node = newQueue.pop();
 
-    test ('the Queue constructor accepts the given data as argument correctly', () => {
-
-        newQueue.add(obj1);
-
-        let node = newQueue.pop();
-
-        expect(_.isEqual(node.data, obj1)).toBe(true);
-
-    })
-
-}) 
+    expect(_.isEqual(node.data, obj1)).toBe(true);
+  });
+});
