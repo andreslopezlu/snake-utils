@@ -23,8 +23,8 @@ describe ('test the Queue class', () => {
   test ('the Queue constructor accepts the given data as argument correctly', () => {
 
     newQueue.add(obj1);
-    let node = newQueue.pop();
+    let data = newQueue.pop();
 
-    expect(_.isEqual(node.data, obj1)).toBe(true);
+    expect(_.isEqual(data, obj1)).toBe(true);
   });
 });

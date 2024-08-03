@@ -135,7 +135,7 @@ describe ('test the DoubleLinkedList class', () => {
     expect(_.isEqual(obj3, deletedNode3.data)).toBe(true);
   });
 
-  test ('the getList method', () => {
+  test ('the getValues method', () => {
     let data = [];
     data.push(obj1);
     data.push(obj2);
