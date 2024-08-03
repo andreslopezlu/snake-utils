@@ -139,6 +139,11 @@ describe ('test the DoubleLinkedList class', () => {
     expect(length).toBe(0);
   });
 
+  test ('the pop method on a empty list', () => {
+    let result = newList.pop();
+    expect(_.isEqual(result, 'Empty List')).toBe(true);
+  })
+
   test ('the shift method of a DoubleLinkedList of length 3', () => {
     newList.push(obj1);
     newList.push(obj2);
@@ -156,6 +161,12 @@ describe ('test the DoubleLinkedList class', () => {
     let length = newList.getLength();
     expect(length).toBe(0);
   });
+
+  test ('the shift method on a empty list', () => {
+    let result = newList.shift();
+    expect(_.isEqual(result, 'Empty List')).toBe(true);
+  })
+
 
   test ('the getValues method', () => {
     let data = [];

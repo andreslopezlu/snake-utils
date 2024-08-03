@@ -36,7 +36,7 @@ class DoubleLinkedList {
   }
 
   pop() {
-    if (!this.first) return;
+    if (!this.first) return 'Empty List';
 
     const node = this.last;
     this.last = this.last.prev;
@@ -47,7 +47,7 @@ class DoubleLinkedList {
   }
 
   shift() {
-    if (!this.first) return;
+    if (!this.first) return 'Empty List';
 
     const node = this.first;
 
