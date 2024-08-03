@@ -22,4 +22,12 @@ describe ('test the Node class', () => {
   test ('the Node constructor accepts the given data as argument correctly', () => {
     expect(_.isEqual(newNode.data, obj1)).toBe(true);
   });
+  
+  test ('the Node constructor sets the next property to null', () => {
+    expect(newNode.next).toBe(null);
+  });
+
+  test ('the Node constructor sets the prev property to null', () => {
+    expect(newNode.prev).toBe(null);
+  });
 });
