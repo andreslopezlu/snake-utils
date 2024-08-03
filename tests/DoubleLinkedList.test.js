@@ -36,9 +36,11 @@ describe ('test the DoubleLinkedList class', () => {
   test ('that a DoubleLinkedList of length 0 points to null values', () => {
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(first).toBe(null);
     expect(last).toBe(null);
+    expect(length).toBe(0);
   });
 
   test ('the push method of a DoubleLinkedList of length 1', () => {
@@ -46,18 +48,24 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
+    expect(length).toBe(1);
   });
 
   test ('the push method of a DoubleLinkedList of length 2', () => {
     newList.push(obj1);
     newList.push(obj2);
+
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
+
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj2, last.data)).toBe(true);
+    expect(length).toBe(2);
   });
 
   test ('the push method of a DoubleLinkedList of length 3', () => {
@@ -67,9 +75,11 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj3, last.data)).toBe(true);
+    expect(length).toBe(3);
   });
 
   test ('the unshift method of a DoubleLinkedList of length 1', () => {
@@ -77,9 +87,11 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
+    expect(length).toBe(1);
   });
 
   test ('the unshift method of a DoubleLinkedList of length 2', () => {
@@ -88,9 +100,11 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(_.isEqual(obj2, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
+    expect(length).toBe(2);
   });
     
   test ('the unshift method of a DoubleLinkedList of length 3', () => {
@@ -100,9 +114,11 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
+    let length = newList.getLength();
 
     expect(_.isEqual(obj3, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
+    expect(length).toBe(3);
   });
 
   test ('the pop method of a DoubleLinkedList of length 3', () => {
@@ -118,6 +134,9 @@ describe ('test the DoubleLinkedList class', () => {
 
     let deletedNode1 = newList.pop();
     expect(_.isEqual(obj1, deletedNode1.data)).toBe(true);
+
+    let length = newList.getLength();
+    expect(length).toBe(0);
   });
 
   test ('the shift method of a DoubleLinkedList of length 3', () => {
@@ -133,6 +152,9 @@ describe ('test the DoubleLinkedList class', () => {
 
     let deletedNode3 = newList.shift();
     expect(_.isEqual(obj3, deletedNode3.data)).toBe(true);
+
+    let length = newList.getLength();
+    expect(length).toBe(0);
   });
 
   test ('the getValues method', () => {
