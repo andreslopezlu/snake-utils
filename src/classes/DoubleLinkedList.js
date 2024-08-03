@@ -70,6 +70,10 @@ class DoubleLinkedList {
     return resultList;
   }
 
+  getLength() {
+    return this.len;
+  }
+
 }
 
 export {DoubleLinkedList};
