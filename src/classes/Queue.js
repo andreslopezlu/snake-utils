@@ -10,7 +10,8 @@ class Queue {
   }
 
   pop() {
-    return this._list.shift();
+    const node = this._list.shift();
+    return node.data;
   }
 }
 
