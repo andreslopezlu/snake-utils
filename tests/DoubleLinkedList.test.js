@@ -36,7 +36,7 @@ describe ('test the DoubleLinkedList class', () => {
   test ('that a DoubleLinkedList of length 0 points to null values', () => {
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(first).toBe(null);
     expect(last).toBe(null);
@@ -48,7 +48,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
@@ -61,7 +61,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj2, last.data)).toBe(true);
@@ -75,7 +75,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj3, last.data)).toBe(true);
@@ -87,7 +87,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj1, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
@@ -100,7 +100,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj2, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
@@ -114,7 +114,7 @@ describe ('test the DoubleLinkedList class', () => {
 
     let first = newList.first;
     let last = newList.last;
-    let length = newList.getLength();
+    let length = newList.len;
 
     expect(_.isEqual(obj3, first.data)).toBe(true);
     expect(_.isEqual(obj1, last.data)).toBe(true);
@@ -135,13 +135,13 @@ describe ('test the DoubleLinkedList class', () => {
     let deletedNode1 = newList.pop();
     expect(_.isEqual(obj1, deletedNode1.data)).toBe(true);
 
-    let length = newList.getLength();
+    let length = newList.len;
     expect(length).toBe(0);
   });
 
   test ('the pop method on a empty list', () => {
     let result = newList.pop();
-    expect(_.isEqual(result, 'Empty List')).toBe(true);
+    expect(_.isEqual(result, null)).toBe(true);
   })
 
   test ('the shift method of a DoubleLinkedList of length 3', () => {
@@ -158,13 +158,13 @@ describe ('test the DoubleLinkedList class', () => {
     let deletedNode3 = newList.shift();
     expect(_.isEqual(obj3, deletedNode3.data)).toBe(true);
 
-    let length = newList.getLength();
+    let length = newList.len;
     expect(length).toBe(0);
   });
 
   test ('the shift method on a empty list', () => {
     let result = newList.shift();
-    expect(_.isEqual(result, 'Empty List')).toBe(true);
+    expect(_.isEqual(result, null)).toBe(true);
   })
 
 
